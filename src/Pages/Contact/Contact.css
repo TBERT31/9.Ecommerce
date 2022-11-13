@@ -1,0 +1,47 @@
+.contact-title {
+    font-size: 50px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px auto;
+}
+
+input {
+    display: block;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px auto;
+}
+
+textarea {
+    display: block;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px auto;
+    width: 70%;
+    height: 15vh;
+}
+
+button {
+    display: block;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px auto;
+}
+
