@@ -4,11 +4,9 @@ import heart from './heart.svg'
 import cartIcon from './shopping-cart.svg'
 import { Link } from "react-router-dom"
 import inventory from '../../data/inventory'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 export default function Products() {
-
-  const productCart = useSelector(state => state)
 
   const dispatch = useDispatch();
 
@@ -16,20 +14,6 @@ export default function Products() {
 
   const addToCartProduct = (id)  => {
 
-    if(productCart.cart<1){
-      const productClicked =   productCart.cart.findIndex(obj => obj.id === id);
-
-      const itemAdded = {
-        ...productCart.cart[productClicked],
-        quantity:  productCart.cart.quantity + 1
-        }
-  
-      dispatch({
-        type: "ADDITEM",
-        payload: itemAdded
-      })
-
-    }else{
       const productClicked =   inventory.findIndex(obj => obj.id === id);
 
       const itemAdded = {
@@ -41,7 +25,7 @@ export default function Products() {
         type: "ADDITEM",
         payload: itemAdded
       })
-    }
+
 
   } 
 
@@ -73,7 +57,7 @@ export default function Products() {
 
                   <div 
                   className="cart-container"
-                  onClick={addToCartProduct}
+                  onClick={()=>addToCartProduct(item.id)}
                   key={item.id}
                   >
                     <img src={cartIcon} alt="icône Panier" />
